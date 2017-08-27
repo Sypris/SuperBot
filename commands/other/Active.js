@@ -22,11 +22,7 @@ class Active extends Commando.Command {
 }
 
 function getGameName(gameObject) {
-    let game = "I am unable to find a game.";
-    if(gameObject) {
-        game = gameObject.name
-    }
-    return game;
+    return gameObject ? gameObject.name : "I am unable to find a game"
 }
 
 module.exports = Active;
