@@ -5,6 +5,7 @@ I've included some of the dependencies I needed to complete certain aspects of t
 
 This project utilizes Node.js and Discord.js-commando framework.
 > https://discord.js.org/#/
+
 > https://nodejs.org/en/
 
 ### Commando framework for discord.js
