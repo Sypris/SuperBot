@@ -1,10 +1,10 @@
 const Commando = require('discord.js-commando');
 const path = require('path');
 const ytdl = require('ytdl-core');
-const streamOptions = { seek: 0, volume: 1 };
+const config = require('./config.json');
 
 const client = new Commando.Client({
-    owner: '291039583947456544'
+    owner: config.clientId
 });
 
 client.registry
@@ -22,6 +22,7 @@ client.on('ready', () => {
 });
 
 client.on('voiceStateUpdate', (oldMember, newMember) => {
+    const streamOptions = { seek: 0, volume: 1 };
     if(newMember.user.username === "Sypris") 
     {
         let channel = newMember.voiceChannel;
@@ -35,4 +36,4 @@ client.on('voiceStateUpdate', (oldMember, newMember) => {
     }
   })
 
-client.login('MjkxMDM5NTgzOTQ3NDU2NTQ0.DIElCQ.jzM94bAiTrww79FwxFXfl9p74EY');
+client.login(config.token);
