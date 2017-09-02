@@ -36,4 +36,5 @@ client.on('voiceStateUpdate', (oldMember, newMember) => {
     }
   })
 
+//Testing code commit
 client.login(config.token);
